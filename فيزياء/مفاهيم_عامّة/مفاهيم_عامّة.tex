@@ -1,0 +1,49 @@
+\documentclass[11pt, a4paper, openright]{book}
+%\usepackage{fancyhdr}
+\usepackage{draftcopy}
+\usepackage[leqno]{amsmath}
+\usepackage{graphicx}
+\usepackage{polyglossia}
+\usepackage{environ}
+
+\setdefaultlanguage[locale=tunisia,calendar=gregorian,numerals=maghrib]{arabic}
+\setmainfont[Script=Arabic,Scale=1.8]{Scheherazade}
+%\setlength{\headheight}{15pt}
+%\pagestyle{fancy}
+\draftcopyName{DRAFT}{160}
+
+\newcommand{\asqrt}[1]{\reflectbox{\ensuremath{\sqrt{\reflectbox{\ensuremath{#1}}}}}}
+\newcommand{\asum}[3]{\reflectbox{\ensuremath{\displaystyle\sum\limits_{\reflectbox{\ensuremath{#1}}}^{\reflectbox{\ensuremath{#2}}} \reflectbox{ \ensuremath{#3} }}}}
+\newcommand{\rbox}[1]{\reflectbox{\ensuremath{#1}}}
+\newcommand{\abox}[1]{\rbox{\mbox{#1}}}
+\NewEnviron{amath}{\begin{math}\rbox{\BODY}\end{math}}
+\NewEnviron{aequation}{\begin{equation}\rbox{\BODY}\end{equation}}
+
+\author{أبو المنتصر لدين اللّه الصّفاقسيّ}
+\title{مفاهيم فيزيائيّة عامّة}
+
+\begin{document}
+%\rhead{right}
+%\chead{center}
+%\lhead{left}
+%\rfoot{right}
+%\cfoot{center}
+%\lfoot{left}
+\maketitle
+\vspace*{\fill}
+يوزّع هذا الكتاب مجّانا على {\large الشّبكة العالميّة للمعلومات المفتوحة}
+\vspace*{\fill}
+\newpage
+\begin{chapter}*{مقدّمة}
+\input{مقدمة}
+\end{chapter}
+\begin{chapter}{علم الحركة}
+\input{الحركة}
+\end{chapter}
+\begin{equation}
+\asqrt{\frac{ ^{\raisebox{3pt}{\mbox{\tiny 2}}}\mbox{ف} } {\mbox{ب} \mbox{4}}}
+\end{equation}
+\begin{equation}
+\asum{\mbox{\scriptsize 0 = س}}{\hspace{-9pt} \scriptsize \infty}{ ^{\mbox{\small 2}} \mbox{س}}
+\end{equation}
+\end{document}
